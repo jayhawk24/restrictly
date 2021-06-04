@@ -20,7 +20,8 @@ const connect = () => {
         .connect(mongoURI, {
             useNewUrlParser: true,
             useUnifiedTopology: true,
-            useFindAndModify: true
+            useFindAndModify: true,
+            useCreateIndex: true
         })
         .then(() => console.log('DB Connected'))
         .catch((err) => {
